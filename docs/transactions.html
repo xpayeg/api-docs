@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Transactions · XPay API</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="After getting a response from Pay endpoint you can use this endpoint to fetch informations about the transaction such as status, transaction id , total amount paid, ETC..."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Transactions · XPay API"/><meta property="og:type" content="website"/><meta property="og:url" content="https://xpayeg.github.io/docs/"/><meta property="og:description" content="After getting a response from Pay endpoint you can use this endpoint to fetch informations about the transaction such as status, transaction id , total amount paid, ETC..."/><meta property="og:image" content="https://xpayeg.github.io/docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://xpayeg.github.io/docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="XPay API"/><h2 class="headerTitleWithLogo">XPay API</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API endpoints</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">API endpoints</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/prepare-amount">Prepare Amount endpoint</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/pay">Pay endpoint</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/transactions">Transactions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Dashboard Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/api-key">API key</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/api-payments">API Payments</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Transactions</h1></header><article><div><span><p>After getting a response from Pay endpoint you can use this endpoint to fetch informations about the transaction such as status, transaction id , total amount paid, ETC...</p>
+<h2><a class="anchor" aria-hidden="true" id="request"></a><a href="#request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REQUEST</h2>
+<h3><a class="anchor" aria-hidden="true" id="testing-server"></a><a href="#testing-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>testing server:</h3>
+<pre><code class="hljs css language-http">GET https://staging.xpay.app/api/communities/{community_id}/transactions/{transaction_uuid}/
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="productionlive-server"></a><a href="#productionlive-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>production(Live) server:</h3>
+<pre><code class="hljs css language-http">GET https://community.xpay.app/api/communities/{community_id}/transactions/{transaction_uuid}/
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h2>
+<h3><a class="anchor" aria-hidden="true" id="path-parameters"></a><a href="#path-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path parameters</h3>
+<h4><a class="anchor" aria-hidden="true" id="required-properties"></a><a href="#required-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required Properties</h4>
+<table>
+<thead>
+<tr><th>Property name</th><th>Value</th><th>Description</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td>community_id</td><td>string</td><td>ID that references prefrences to your community</td><td>value that your community recieved from XPay</td></tr>
+<tr><td>transaction_uuid</td><td>string</td><td>UUID of the transaction to be fetched</td><td>you usually have this value from the response of PAY endpoint</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="request-body"></a><a href="#request-body" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request body</h2>
+<pre><code class="hljs">Do not supply a request body.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="response-body"></a><a href="#response-body" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response body</h2>
+<p>If successful, this method returns a response body with the following structure:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"status"</span>: {
+    <span class="hljs-attr">"code"</span>: integer,
+    <span class="hljs-attr">"message"</span>: string,
+    <span class="hljs-attr">"errors"</span>: []
+  },
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"created"</span>: string,
+    <span class="hljs-attr">"id"</span>: integer,
+    <span class="hljs-attr">"uuid"</span>: string,
+    <span class="hljs-attr">"total_amount_piasters"</span>: integer,
+    <span class="hljs-attr">"status"</span>: string
+  },
+  <span class="hljs-attr">"count"</span>: integer,
+  <span class="hljs-attr">"next"</span>: string,
+  <span class="hljs-attr">"previous"</span>: string
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-13-tab-14" class="nav-link active" data-group="group_13" data-tab="tab-group-13-content-14">Request body</div><div id="tab-group-13-tab-15" class="nav-link" data-group="group_13" data-tab="tab-group-13-content-15">Request body</div></div><div class="tab-content"><div id="tab-group-13-content-14" class="tab-pane active" data-group="group_13" tabindex="-1"><div><span><pre><code class="hljs css language-json"><br /></code></pre>
+</span></div></div><div id="tab-group-13-content-15" class="tab-pane" data-group="group_13" tabindex="-1"><div><span><pre><code class="hljs css language-json">{<br />  <span class="hljs-attr">"status"</span>: {<br />    <span class="hljs-attr">"code"</span>: <span class="hljs-number">200</span>,<br />    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"success"</span>,<br />    <span class="hljs-attr">"errors"</span>: []<br />  },<br />  <span class="hljs-attr">"data"</span>: {<br />    <span class="hljs-attr">"created"</span>: <span class="hljs-string">"2020-05-10T14:20:11.855539+02:00"</span>,<br />    <span class="hljs-attr">"id"</span>: <span class="hljs-number">3517</span>,<br />    <span class="hljs-attr">"uuid"</span>: <span class="hljs-string">"452ecb4d-3b6e-4a94-af82-f3ffd21c7e0f"</span>,<br />    <span class="hljs-attr">"total_amount_piasters"</span>: <span class="hljs-number">5000</span>,<br />    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"SUCCESSFUL"</span><br />  },<br />  <span class="hljs-attr">"count"</span>: <span class="hljs-literal">null</span>,<br />  <span class="hljs-attr">"next"</span>: <span class="hljs-literal">null</span>,<br />  <span class="hljs-attr">"previous"</span>: <span class="hljs-literal">null</span><br />}<br /></code></pre>
+</span></div></div></div></div>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/10/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/pay"><span class="arrow-prev">← </span><span>Pay endpoint</span></a><a class="docs-next button" href="/docs/docs/api-key"><span>API key</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#request">REQUEST</a><ul class="toc-headings"><li><a href="#testing-server">testing server:</a></li><li><a href="#productionlive-server">production(Live) server:</a></li></ul></li><li><a href="#parameters">Parameters</a><ul class="toc-headings"><li><a href="#path-parameters">Path parameters</a></li></ul></li><li><a href="#request-body">Request body</a></li><li><a href="#response-body">Response body</a><ul class="toc-headings"><li><a href="#example">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/favicon.ico" alt="XPay API" width="50" height="50"/></a><div><h5>Docs</h5><a href="/docs/docs/en/getting-started.html">Getting Started</a><a href="/docs/docs/en/doc3.html">API Reference</a></div><div><h5>Community</h5><a href="https://xpay.app/" target="_blank" rel="noreferrer noopener">Website</a><a href="https://www.facebook.com/XpayEG/" target="_blank" rel="noreferrer noopener">Facebook</a><div class="social"><a href="https://twitter.com/xpayeg" class="twitter-follow-button">Follow @xpayeg</a></div></div></section><a href="https://xpay.app/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docs/img/xpay_logo.png" alt="xpay logo"/></a><section class="copyright">Copyright © 2020 XPAY</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
