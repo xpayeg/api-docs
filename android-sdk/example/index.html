@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.69">
+<link rel="search" type="application/opensearchdescription+xml" title="XPAY" href="/docs/opensearch.xml"><title data-react-helmet="true">Tutorial | XPAY</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="Tutorial | XPAY"><meta data-react-helmet="true" name="description" content="&lt;!--"><meta data-react-helmet="true" property="og:description" content="&lt;!--"><meta data-react-helmet="true" property="og:url" content="https://xpayeg.github.io/docs/android-sdk/example"><link data-react-helmet="true" rel="shortcut icon" href="/docs/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://xpayeg.github.io/docs/android-sdk/example"><link rel="stylesheet" href="/docs/styles.8c5ff34c.css">
+<link rel="preload" href="/docs/styles.3229d0a7.js" as="script">
+<link rel="preload" href="/docs/runtime~main.3f9f0fe5.js" as="script">
+<link rel="preload" href="/docs/main.af1a8f5b.js" as="script">
+<link rel="preload" href="/docs/1.386338a1.js" as="script">
+<link rel="preload" href="/docs/26.ece9695a.js" as="script">
+<link rel="preload" href="/docs/29.c50d3e04.js" as="script">
+<link rel="preload" href="/docs/f976f453.5dfe3540.js" as="script">
+<link rel="preload" href="/docs/25.f8d3c7df.js" as="script">
+<link rel="preload" href="/docs/4cc156f0.d686a3d1.js" as="script">
+</head>
+<body>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
+<nav aria-label="Skip navigation links"><button type="button" tabindex="0" class="skipToContent_2AhQ">Skip to main content</button></nav><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand" href="/docs/"><img src="/docs/img/xpay_large.ico" alt="XPay Logo" class="themedImage_2E_h themedImage--light_AouX navbar__logo"><img src="/docs/img/xpay_large.ico" alt="XPay Logo" class="themedImage_2E_h themedImage--dark_1YPN navbar__logo"><strong class="navbar__title">Xpay Docs</strong></a><a class="navbar__item navbar__link" href="/docs/api-key">Guides</a><a class="navbar__item navbar__link" href="/docs/">API Reference</a></div><div class="navbar__items navbar__items--right"><a href="https://forms.clickup.com/f/2a24f-3536/JBPV2ITJ7OFKWK9G7M" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Support</a><div class="react-toggle react-toggle--disabled displayOnlyInLargeViewport_2aTZ"><div class="react-toggle-track"><div class="react-toggle-track-check"><span class="toggle_BsTx">🌜</span></div><div class="react-toggle-track-x"><span class="toggle_BsTx">🌞</span></div></div><div class="react-toggle-thumb"></div><input type="checkbox" disabled="" aria-label="Dark mode toggle" class="react-toggle-screenreader-only"></div><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span><span class="DocSearch-Button-Key">⌘</span><span class="DocSearch-Button-Key">K</span></button></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand" href="/docs/"><img src="/docs/img/xpay_large.ico" alt="XPay Logo" class="themedImage_2E_h themedImage--light_AouX navbar__logo"><img src="/docs/img/xpay_large.ico" alt="XPay Logo" class="themedImage_2E_h themedImage--dark_1YPN navbar__logo"><strong class="navbar__title">Xpay Docs</strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/api-key">Guides</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/">API Reference</a></li><li class="menu__list-item"><a href="https://forms.clickup.com/f/2a24f-3536/JBPV2ITJ7OFKWK9G7M" target="_blank" rel="noopener noreferrer" class="menu__link">Support</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_2gpo"><div class="docSidebarContainer_3_JD" role="complementary"><div class="sidebar_2urC"><div class="menu menu--responsive thin-scrollbar menu_5FrY"><button aria-label="Open Menu" aria-haspopup="true" class="button button--secondary button--sm menu__button" type="button"><svg aria-label="Menu" class="sidebarMenuIcon_Dm3K" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 32 32" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><ul class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#!">Standalone checkout tools</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/custom-fields">Custom Fields</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/promo-code">Promocode</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/direct-order">Direct Order</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#!">Payments API Endpoints</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/">Introduction</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/authentication">Authentication</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/prepare-amount">Prepare Amount endpoint</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/pay">Pay endpoint</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/transactions">Transaction endpoint</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/subscription">Subscription</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/postman">Postman Collection</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/woo-commerce">Woo-Commerce XPay Plugin</a></li></ul></li><li class="menu__list-item"><a class="menu__link menu__link--sublist menu__link--active" href="#!">Android SDK</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/docs/android-sdk/installation">Introduction</a></li><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/docs/android-sdk/xpayutils">XpayUtils</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link menu__link--active active" tabindex="0" href="/docs/android-sdk/example">Tutorial</a></li><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/docs/android-sdk/classes">Models</a></li><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/docs/android-sdk/sdk-errors">Errors reference</a></li></ul></li><li class="menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#!">Dashboard guides</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/api-key">API key</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/api-payments">API Payments</a></li><li class="menu__list-item"><a class="menu__link" tabindex="-1" href="/docs/community-id">How to get your community ID</a></li></ul></li></ul></div><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_2Tub"></button></div></div><main class="docMainContainer_3EyW"><div class="container padding-vert--lg docItemWrapper_39qw"><div class="row"><div class="col docItemCol_2ASc"><div class="docItemContainer_3QWW"><article><header><h1 class="docTitle_1Lrw">Tutorial</h1></header><div class="markdown"><h2 id="introduction">Introduction</h2><p>In this tutorial you learn how to use the XPay KotlinUtils SDK with your Android application.</p><p>The Example app for this tutorial is a simplified shoe store which consists of a single product activity and four other activities for the checkout process.</p><h2 id="what-you-should-already-know">What you should already know</h2><ul><li><p>This codelab is written for programmers and assumes that you know either the Java or Kotlin programming language.
+If you are an experienced programmer and adept at reading code, you will likely be able to follow this codelab, even if you don&#x27;t have much experience with Kotlin.</p></li><li><p>You should understand the general software development process for Android apps using Android Studio.</p></li></ul><h2 id="what-youll-learn">What you&#x27;ll learn</h2><ul><li>How to install KotlinUtils in an Android application.</li><li>How to use XpayUtils properties and methods to build the checkout process and process payments online.</li></ul><h2 id="what-youll-do">What you&#x27;ll do</h2><ul><li>Clone the example app code.</li><li>Explore the project layout.</li><li>Run the app on virtual or physical devices.</li><li>Include and use KotlinUtils using the example codes included here.</li><li>Run the app and test a complete payment cycle on XPay testing server.</li></ul><h2 id="project-code">Project code</h2><ul><li><p>Clone this <a href="https://github.com/xpayeg/Android-kotlin-sdk-example">repo</a> for <strong>Kotlin</strong> project code</p></li><li><p>Clone this <a href="https://github.com/xpayeg/Android-java-sdk-example">repo</a> for <strong>Java</strong> project code</p></li></ul><p>Checkout <code>example-start</code> branch for the starter code and <code>example-completed</code> branch for the complete code including the code snippets found here.</p><h2 id="project-layout">Project layout</h2><p>Open the project in Android studio and check out the files inside java/com.xpay.kotlin</p><p>You will find 5 Kotlin or Java files that contains logic for each activity in our app.</p><p>below is a description for each one:</p><ul><li><strong>ProductActivity</strong> is the main activity and it simulates a product page in a shoe store app.</li><li><strong>UserInfoActivity</strong> is the first activity in the checkout process that is responsible for getting the user billing information and choosing the payment method</li><li><strong>PaymentPreviewActivity</strong> is the second activity in the checkout process that is responsible for displaying a preview of the payment and displaying the Credit Card form in the case of card payment</li><li><strong>CashPaymentActivity</strong> is the third activity in the checkout process (in case of Kiosk/Cash collection) that is responsible for displaying payment refrence number to the user</li><li><strong>TransactionActivity</strong> is the fifth activity that is responsible for displaying transaction information for the user</li></ul><h2 id="run-the-app">Run The app</h2><p>After you explored the project code and made yourself comfortable with it,
+go ahead and run it either on an emulator or your physical device</p><p>After the app build and run you will see the fake product page on the main screen,
+go ahead and explore it then try to click the checkout button at the end of the screen you will find that it does nothing.</p><img alt="Add API key" src="/docs/kotlinsdk/01.gif"><p>in the upcoming sections we are going to edit the ProductActivity code to start the checkout process but first let&#x27;s install KotlinUtils in our app.</p><h2 id="1-prepare-for-the-checkout-process">1. Prepare for the checkout process</h2><p>Let&#x27;s start implementing the checkout process. First, We need to set our credentials.</p><ol><li><p>Open ProductActivity inside the java folder.</p></li><li><p>Go to <code>onCreate</code> function and add the following code between the the commented lines <code>01-start</code> and <code>01-end</code>.</p></li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/ProductActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/ProductActivity.kt&quot;">// set XpayUtils core settings
+XpayUtils.apiKey = &quot;Cce74Y3B.J0P4tItq7hGu2ddhCB0WF5ND1eTubkpT&quot;
+XpayUtils.communityId = &quot;m2J7eBK&quot;
+XpayUtils.apiPaymentId = 60
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/ProductActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/ProductActivity.java&quot;">// set XpayUtils core settings
+XpayUtils.INSTANCE.setApiKey(&quot;Cce74Y3B.J0P4tItq7hGu2ddhCB0WF5ND1eTubkpT&quot;);
+XpayUtils.INSTANCE.setCommunityId(&quot;m2J7eBK&quot;);
+XpayUtils.INSTANCE.setApiPaymentId(60);
+</code></pre></div></div></div><p>The Above code sets the required settings to start using XpayUtils which are:</p><ul><li><a href="/api-key">API key</a></li><li><a href="/api-key">Community ID</a></li><li><a href="/api-payments">API payment ID</a></li></ul><div class="admonition admonition-info alert alert--info"><div class="admonition-heading"><h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</h5></div><div class="admonition-content"><p>since XpayUtils is a singelton class, it&#x27;s instance is created after the first access to any of it&#x27;s properties or methods.</p></div></div><p>Now, let&#x27;s start the checkout process by calling <code>prepareAmount()</code> method with the total amount of the cart.</p><ol start="3"><li>Go to the end of <code>onCreate</code> function and add the following code between the the commented lines <code>02-start</code> and <code>02-end</code>.</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/ProductActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/ProductActivity.kt&quot;">lifecycleScope.launch {
+  try {
+    dialog?.show()
+    XpayUtils.prepareAmount(totalAmount)
+    goToCheckout()
+  } catch (e: Exception) {
+    dialog?.hide()
+    e.message?.let { it1 -&gt; displayError(it1) }
+  }
+}
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/ProductActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/ProductActivity.java&quot;">XpayUtils.INSTANCE.prepareAmount(totalAmount, prepareCallback);
+
+</code></pre></div></div></div><p>The above code will get called when the checkout button is clicked, it does the following:</p><ol><li><p>Show up loading screen.</p></li><li><p>Call <a href="/android-sdk/xpayutils#prepareamount"><code>prepareAmount()</code></a> method with the total amount of the user&#x27;s cart which if successfull does the following:</p><ul><li>Get the active payment methods available to your community and set them in <a href="/android-sdk/xpayutils#activepaymentmethods">activePaymentMethods</a>.</li><li>Get the total amount including fees(if any) for each active payment method and set them in <a href="/android-sdk/xpayutils#paymentoptionstotalamounts">PaymentOptionsTotalAmounts</a>.</li><li>Return <a href="/android-sdk/classes#prepareamountdata">PrepareAmountData</a> object which represents the total amount including fees (if any) for each active payment method.</li></ul></li><li><p>If the request is successfull call <code>goToCheckout()</code> function which for now it just:</p><ul><li>Hide the loading screen</li><li>Navigates to UserInfoActivity activity.</li></ul></li><li><p>If an exception occured,</p><ul><li>Hide the loading screen</li><li>Call <code>displayError(res)</code> function with the result which displays the error message in a Toast.</li></ul></li></ol><div class="admonition admonition-note alert alert--secondary"><div class="admonition-heading"><h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</h5></div><div class="admonition-content"><p><code>XpayUtils.prepareAmount()</code> is a suspend function, it has to run inside a Coroutine/Async Scope.</p></div></div><hr><h2 id="2-adding-custom-fields">2. Adding custom fields</h2><p>If you want to save extra information with the transaction in XPay servers like in this example, the color and size chosen, You can do so using custom fields methods.</p><p>Go to the <code>goToCheckout</code> function definition and add the following code between the the commented lines that says <code>03-start</code> and <code>03-end</code>.</p><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/ProductActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/ProductActivity.kt&quot;">XpayUtils.addCustomField(&quot;color&quot;, color)
+XpayUtils.addCustomField(&quot;size&quot;, size)
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/ProductActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/ProductActivity.java&quot;">XpayUtils.INSTANCE.addCustomField(&quot;color&quot;, color);
+XpayUtils.INSTANCE.addCustomField(&quot;size&quot;, size);
+</code></pre></div></div></div><p>The above code does the following:</p><ol><li>Add the value of the chosen color stored in the <code>color</code> variable as a custom field with a key value of &quot;color&quot;</li><li>Add the value of the chosen size stored in the <code>size</code> variable as a custom field with a key value of &quot;size&quot;</li></ol><p>Try to run the app again and click on the checkout button in the first activity.</p><img alt="Add API key" src="/docs/kotlinsdk/02.gif"><p>Now when you click on the checkout button, you see the loading windows shows up while making the request then
+it takes you to the checkout activity where the user submit his billing info and choose payment method.
+But you will find that the payment options dropdown is empty.</p><p>In the next section you will populate the empty dropdown with the available payment methods.</p><hr><h2 id="3-display-active-payment-methods">3. Display active payment methods</h2><p>Now it&#x27;s time to read the avilable payment methods to your community and pass them to the
+payment options dropdown so the user can choose one of them.</p><ol><li><p>Go to UserInfoActivity inside the java folder.</p></li><li><p>Go to <code>onCreate</code> function and add the following code between the the commented lines <code>01-start</code> and <code>01-end</code>.</p></li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;">// Populate paymentMethodsDropdown with available active payment methods
+val paymentMethodsAdapter: ArrayAdapter&lt;String&gt;?
+val paymentMethodsList: MutableList&lt;String&gt; = mutableListOf()
+// get the available active payment methods and convert it to List&lt;String&gt;
+for (paymentMethod in XpayUtils.activePaymentMethods) {
+    paymentMethodsList.add(paymentMethod.toString())
+}
+paymentMethodsAdapter = paymentMethodsList.distinct().toList().let {
+    ArrayAdapter(
+        this, android.R.layout.simple_spinner_item, it
+    )
+}
+paymentMethodsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+paymentMethodsDropdown.adapter = paymentMethodsAdapter
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;">// Populate paymentMethodsDropdown with available active payment methods
+ArrayAdapter&lt;String&gt; adapter = null;
+List&lt;String&gt; paymentMethodsList = new ArrayList&lt;String&gt;();
+// get the available active payment methods and convert it to List&lt;String&gt;
+for (PaymentMethods i : mSpinnerData) {
+  paymentMethodsList.add(i.toString());
+}
+
+
+Set&lt;String&gt; set = new LinkedHashSet&lt;&gt;(paymentMethodsList);
+paymentMethodsList.clear();
+paymentMethodsList.addAll(set);
+
+// Populate paymentMethodsDropdown with available active payment methods
+adapter = new ArrayAdapter&lt;String&gt;(this, android.R.layout.simple_spinner_item, paymentMethodsList);
+adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+paymentMethodsDropdown.setAdapter(adapter);
+</code></pre></div></div></div><p>The above code will get called when the activity is created, it does the following in order:</p><ul><li>Read the available payment methods found in <code>XpayUtils.activePaymentMethods</code> after <code>prepareAmount()</code> method was called.</li><li>Converts the available payment methods found in <code>XpayUtils.activePaymentMethods</code> to a list of String values.</li><li>Pass the converted list to the paymentMethodsDropdown adapter so it&#x27;s shown in the payment method dropdown.</li></ul><hr><h2 id="4-set-payment-method">4. Set Payment method</h2><p>Navigate to the overriden <code>onItemSelected</code> function and add the following code between the the commented lines <code>02-start</code> and <code>02-end</code>.</p><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;">
+when (XpayUtils.activePaymentMethods[position]) {
+  PaymentMethods.CASH -&gt; {
+      totalAmount = XpayUtils.PaymentOptionsTotalAmounts?.cash!!
+      XpayUtils.payUsing = PaymentMethods.CASH
+      showView(constraint_shipping)
+  }
+  PaymentMethods.CARD -&gt; {
+      totalAmount = XpayUtils.PaymentOptionsTotalAmounts?.card!!
+      XpayUtils.payUsing = PaymentMethods.CARD
+      hideView(constraint_shipping)
+  }
+  PaymentMethods.KIOSK -&gt; {
+      totalAmount = XpayUtils.PaymentOptionsTotalAmounts?.kiosk!!
+      XpayUtils.payUsing = PaymentMethods.KIOSK
+      hideView(constraint_shipping)
+  }
+}
+totalAmount = String.format(&quot;%.2f&quot;, totalAmount).toDouble()
+totalAmountTxt.text = &quot;Total Amount: ${totalAmount} Egp&quot;
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;">case CASH: {
+  amount = Objects.requireNonNull(XpayUtils.INSTANCE.getPaymentOptionsTotalAmounts()).getCash();
+  XpayUtils.INSTANCE.setPayUsing(PaymentMethods.CASH);
+  showView(parent);
+  break;
+}
+case CARD: {
+  amount = Objects.requireNonNull(XpayUtils.INSTANCE.getPaymentOptionsTotalAmounts()).getCard();
+  XpayUtils.INSTANCE.setPayUsing(PaymentMethods.CARD);
+  hideView(parent);
+  validForm = true;
+  break;
+}
+case KIOSK: {
+  amount = Objects.requireNonNull(XpayUtils.INSTANCE.getPaymentOptionsTotalAmounts()).getKiosk();
+  XpayUtils.INSTANCE.setPayUsing(PaymentMethods.KIOSK);
+  hideView(parent);
+  validForm = true;
+  break;
+}
+}
+amount = Double.parseDouble(String.format(&quot;%.2f&quot;, amount));
+totalAmount.setText(&quot;Total Amount: &quot; + amount + &quot; Egp&quot;);
+</code></pre></div></div></div><p>The above code is called whenever the user chooses a payment method from the payment methods dropdown, it does the following:</p><ol><li>Sets the payment method chosen in <code>XpayUtils.payUsing</code> property.</li><li>Displays the total amount that will be paid for the payment method chosen from <code>XpayUtils.PaymentOptionsTotalAmounts</code> property.</li><li>Show Shipping information form if cash collection method was chosen, and hide it otherwise.</li></ol><p>Try to run the app again and click on the checkout button in the first activity.</p><img alt="Add API key" src="/docs/kotlinsdk/03.gif"><p>Now when you go to UserInfoActivity, you will notice that the payment methods dropdown have three options; card, cash, and kiosk.
+each time you choose a different payment method the total amount in the text below will change accordingly.</p><p>You can also see that the shipping information form appears when you use cash as the payment method.
+It is useless for now but in the next section you will populate it&#x27;s city and state dropdowns with values.</p><hr><h2 id="5-populate-city-state-values">5. Populate city-state values</h2><ol><li>Go to the commented lines <code>03-start</code> and <code>03-end</code> inside <code>onCreate</code> function and add the following code</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;">// get the value of countries-cities combinations from assets
+val jsonFileString = getJsonDataFromAsset(applicationContext, &quot;countries.json&quot;)
+val obj = JSONObject(jsonFileString!!)
+
+val countriesList = populateCountries(obj)
+}
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;">JSONObject obj = new JSONObject();
+String jsonFileString = getJsonDataFromAsset(this, &quot;countries.json&quot;);
+try {
+  assert jsonFileString != null;
+  obj = new JSONObject(jsonFileString);
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+List&lt;String&gt; finalAllCountries = populateCountries(obj);
+JSONObject finalObj = (JSONObject) obj;
+</code></pre></div></div></div><p>The above code does the following:</p><ul><li>Read the <code>countries.json</code> file from assets which contains the city-state combination</li><li>call <code>populateCountries(obj)</code> method which:<ul><li>return a list of type string that represents the cities</li><li>pass the list to the cities dropdown adapter</li></ul></li></ul><ol start="2"><li>Go to the commented lines <code>04-start</code> and <code>04-end</code> inside <code>onCreate</code> function and add the following code</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;">populateStates(obj, countriesList[position])
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;">populateStates(finalObj, finalAllCountries.get(i));
+</code></pre></div></div></div><p>The above code does the following:</p><ul><li>When the user selects a city, it calls <code>populateStates()</code> method which:<ul><li>Get a list of type string that represents the states that belongs to the city chosen</li><li>pass the states list to the state dropdown adapter</li></ul></li></ul><p>Try to run the app again and click on the checkout button in the first activity.</p><img alt="Add API key" src="/docs/kotlinsdk/04.gif"><p>Now when you go to UserInfoActivity, select cash as the payment method.</p><p>when the shipping information form appears you can now select a city state combination using the values in the dropdowns.</p><hr><h2 id="6-validate-billing-info-and-preview-payment-information">6. Validate billing info and preview payment information</h2><p>Now it&#x27;s time to validate the billing info before submitting a payment request.</p><ol><li>Go to the commented lines <code>05-start</code> and <code>05-end</code> inside <code>onCreate</code> function and add the following code</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/UserInfoActivity.kt&quot;">var validShippingInfo: Boolean = true
+if (constraint_shipping.visibility == View.VISIBLE) {
+  if (validateShippingInfo()) {
+    validShippingInfo = true
+    // set payment shipping info
+    XpayUtils.ShippingInfo = ShippingInfo(
+        &quot;EG&quot;,
+        sp_state.selectedItem.toString(),
+        sp_country.selectedItem.toString(),
+        et_apartment.text.toString(),
+        et_building.text.toString(),
+        et_floor.text.toString(),
+        et_street.text.toString()
+    )
+  } else validShippingInfo = false
+}
+
+if (validateBillingInfo() &amp;&amp; validShippingInfo) {
+// set payment billing info
+try {
+  XpayUtils.billingInfo =
+    BillingInfo(
+      userName.text.toString(),
+      userEmail.text.toString(),
+      &quot;+2${userPhone.text}&quot;
+    )
+  val intent = Intent(this, PaymentPreviewActivity::class.java)
+  intent.putExtra(&quot;TOTAL_AMOUNT&quot;, totalAmount.toString())
+  startActivity(intent)
+} catch (e: Exception) {
+  e.message?.let { it1 -&gt; Toast.makeText(this, it1, Toast.LENGTH_LONG).show() }
+}
+}
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/UserInfoActivity.java&quot;">boolean validShippingInfo = true;
+if (parent.getVisibility() == View.VISIBLE) {
+  if (validateShippingInfo()) {
+    validShippingInfo = true;
+    // set payment shipping info
+    XpayUtils.INSTANCE.setShippingInfo(new ShippingInfo(
+      &quot;EG&quot;,
+      state.getSelectedItem().toString(),
+      country.getSelectedItem().toString(),
+      apartment.getText().toString(),
+      building.getText().toString(),
+      floor.getText().toString(),
+      street.getText().toString()
+  ));
+  } else validShippingInfo = false;
+}
+
+if (validateBillingInfo() &amp;&amp; validShippingInfo) {
+  // set payment billing info
+  try {
+    XpayUtils.INSTANCE.setBillingInfo(new BillingInfo(name.getText().toString(), email.getText().toString(), &quot;+2&quot; + phone.getText().toString()));
+    Intent intent = new Intent(getApplicationContext(), PaymentPreviewActivity.class);
+    intent.putExtra(&quot;TOTAL_AMOUNT&quot;, amount.toString());
+    startActivity(intent);
+  } catch (Exception e) {
+    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+  }
+}
+</code></pre></div></div></div><p>The above code is called when the submit button in UserInfoActivity is clicked, it does the following:</p><ol><li><p>Define and set a var <code>validShippingInfo</code> to <code>true</code></p></li><li><p>Checks if the shipping form is visible:</p><ul><li>If true it checks the return value of <code>validateShippingInfo()</code> method which checks that non of the shipping information ofrm values are not empty:<ul><li>if true, sets <code>XpayUtils.ShippingInfo</code> property using <code>ShippingInfo</code> data class</li><li>if false, it sets <code>validShippingInfo</code> to <code>false</code></li></ul></li></ul></li><li><p>Checks the return value of <code>validateBillingInfo()</code> method and <code>validShippingInfo</code> var</p><ul><li>if true, set <code>XpayUtils.userInfo</code> property using <code>User</code> data class and start a PaymentPreviewActivity</li></ul></li></ol><p><code>validateBillingInfo()</code> method does nothing more than check that the values in the billing information is not empty.</p><p>We recommend implementing your own verification logic that checks that the billing informations follow the Regex patterns found <a href="/android-sdk/classes#billinginfo">here</a>.</p><hr><h2 id="7-review-payment-information">7. Review Payment information</h2><p>Now it&#x27;s time you show the user a preview of the payment information he provided before taking him to the final step which is payment.</p><ol><li><p>Open PaymentPreviewActivity inside the java folder.</p></li><li><p>Go to <code>onCreate</code> function and add the following code between the the commented lines <code>01-start</code> and <code>01-end</code>.</p></li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;">textName.text = &quot;Name: \n${XpayUtils.billingInfo!!.name}&quot;
+textEmail.text = &quot;Email: \n${XpayUtils.billingInfo!!.email}&quot;
+txtPhone.text = &quot;Phone: \n${XpayUtils.billingInfo?.phone}&quot;
+txtMethod.text = &quot;Payment Method: \n${XpayUtils.payUsing}&quot;
+totalAmount.text = &quot;Total Amount: \n${intent.getStringExtra(&quot;TOTAL_AMOUNT&quot;)?.toDouble()}&quot;
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;">txt_name.setText(&quot;Name: \n&quot; + XpayUtils.INSTANCE.getBillingInfo().getName());
+txt_mail.setText(&quot;Email: \n&quot; + XpayUtils.INSTANCE.getBillingInfo().getEmail());
+txt_phone.setText(&quot;Phone: \n&quot; + XpayUtils.INSTANCE.getBillingInfo().getPhone());
+txtcomm_id.setText(&quot;Community Id: \n&quot; + XpayUtils.INSTANCE.getCommunityId());
+txt_varid.setText(&quot;Variable amount: \n&quot; + XpayUtils.INSTANCE.getApiPaymentId());
+txt_method.setText(&quot;Payment method: \n&quot; + XpayUtils.INSTANCE.getPayUsing());
+txt_total.setText(&quot;Total Amount: \n&quot; + getIntent().getStringExtra(&quot;TOTAL_AMOUNT&quot;));
+</code></pre></div></div></div><p>The above code sets each text box in the PaymentPreviewActivity corresponding layout
+to the values you set before for the billing information in the previous section using <code>XpayUtils.userInfo</code> and <code>XpayUtils.payUsing</code></p><p>Try to run the app again go to UserInfoActivity, click on the confirm button.</p><p>You will be navigated to the PaymentPreviewActivity which will display the payment information submitted and the total amount to be paid.</p><img alt="Add API key" src="/docs/kotlinsdk/05.gif"><ol start="3"><li>go between the commented lines <code>02-start</code> and <code>02-end</code> and add the following code.</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;">try {
+  dialog!!.show()
+  GlobalScope.launch {
+  val response = XpayUtils.pay()
+  response?.let { completePayment(response) }
+}
+} catch (e: Exception) {
+  dialog?.dismiss()
+  e.message?.let { it1 -&gt; Toast.makeText(this, it1, Toast.LENGTH_LONG).show() }
+}
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;">try {
+  dialog.show();
+  XpayUtils.INSTANCE.pay(payCallback);
+} catch (Exception e) {
+  Toast.makeText(PaymentPreviewActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+}
+</code></pre></div></div></div><p>The above code will get called when the PAY button is clicked, it does the following:</p><ol><li>Show up loading screen.</li><li>Call <code>pay</code> method to start processing the payment.</li><li>If the request is successfull call <code>completePayment()</code> function with the response which for now it just:<ul><li>Hide the loading screen</li></ul></li><li>If an exception occured,<ul><li>Hide the loading screen</li><li>displays the error message in a Toast.</li></ul></li></ol><div class="admonition admonition-note alert alert--secondary"><div class="admonition-heading"><h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</h5></div><div class="admonition-content"><p><code>XpayUtils.pay()</code> is a suspend function it has to run inside a Coroutine/Async Scope.</p></div></div><hr><h2 id="8-payment">8. Payment</h2><p>Now it&#x27;s time to build the final payment step in the checkout process.</p><ol><li>Go to <code>completePayment(response: PayData)</code> function and add the following code between the the commented lines <code>03-start</code> and <code>03-end</code>.</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;">if (response.iframe_url != null) {
+  // if iframe_url inside the returned response is not null, launch a web view to display the payment form
+  isCardPayment = true
+  uuid = response.transaction_uuid
+  // start a web view and navigate the user to the credit card form
+  val builder = CustomTabsIntent.Builder()
+  builder.setToolbarColor(resources.getColor(R.color.colorPrimary))
+  builder.setShowTitle(true)
+  val customTabsIntent: CustomTabsIntent = builder.build()
+  customTabsIntent.launchUrl(this@PaymentPreviewActivity, Uri.parse(response.iframe_url))
+} else if (response.message != null) {
+  // if iframe_url inside the returned response is null while the message is not null
+  // this is a kiosk or cash collection payment, just display the message to the user
+  isCardPayment = false
+  val intent = Intent(baseContext, CashPaymentActivity::class.java)
+  intent.putExtra(&quot;UUID&quot;, response.transaction_uuid)
+  intent.putExtra(&quot;MESSAGE&quot;, response.message)
+  startActivity(intent)
+  }
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;">if (response.getIframe_url() != null) {
+  // if iframe_url inside the returned response is not null, launch a web view to display the payment form
+  isCardPayment = true;
+  uuid = response.getTransaction_uuid();
+  // start a web view and navigate the user to the credit card form
+  CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+  builder.setToolbarColor(R.color.colorPrimary);
+  builder.setShowTitle(true);
+  CustomTabsIntent customTabsIntent = builder.build();
+  customTabsIntent.launchUrl(this, Uri.parse(response.getIframe_url()));
+} else if (response.getMessage() != null) {
+  // if iframe_url inside the returned response is null while the message is not null
+  // this is a kiosk or cash collection payment, just display the message to the user
+  isCardPayment = false;
+  Intent intent = new Intent(this, CashPaymentActivity.class);
+  intent.putExtra(&quot;UUID&quot;, response.getTransaction_uuid());
+  intent.putExtra(&quot;MESSAGE&quot;, response.getMessage());
+  startActivity(intent);
+}
+</code></pre></div></div></div><p>The above code does the following:</p><p>Checks if the <code>iframe_url</code> value of the response passed</p><ul><li>If not null, then this is is a credit card payment:<ul><li>set <code>isCardPayment</code> to <code>true</code>.</li><li>setup a web view using <a href="https://developers.google.com/web/android/custom-tabs">Custom tabs</a>.</li><li>Start the web view and Navigate to the credit card form using the value found inside <code>iframe_url</code>.</li></ul></li><li>If null, check if the <code>message</code> value of the response passed<ul><li>If not null, then this is a kiosk/cash collection payment:<ul><li>set <code>isCardPayment</code> to <code>false</code>.</li><li>create an Intent for the CashPaymentActivity</li><li>pass <code>transaction_uuid</code> and <code>message</code> values of the response to the intent.</li><li>start to CashPaymentActivity which displays the response message content.</li></ul></li></ul></li></ul><p>Try to run the app again and follow the checkout cycle till you click the PAY button.</p><p>If you chose KIOSK or cash collection payment method, you will be redirected to PaymentPreviewActivity which will display the response message.</p><img alt="Add API key" src="/docs/kotlinsdk/07.gif"><p>If you chose card payment method, you will be redirected to credit card form.</p><img alt="Add API key" src="/docs/kotlinsdk/06.gif"><p>You can use the testing credit card information found <a href="/android-sdk/installation#test">here</a> in the form.</p><p>When you submit the credit card information it will take you to a ACS emulator form, ignore that and press submit again.</p><hr><h2 id="9-getting-transaction-details">9. Getting Transaction details</h2><p>Later on, you might need to show the user details about his past transactions,
+whether to check on the transaction status or get other info like total amount paid or even the custom fields that was saved with the transaction.</p><p>You can get a transaction details using <code>XpayUtils.getTransaction(transactionUuid: String)</code> method and the transaction UUID.</p><p>We will implement this method in our app so that when the user closes the web view of the credit card form,
+It navigates him to the TransactionActivity which shows him the current transaction status as well as other information.</p><ol><li><p>Go to PaymentPreviewActivity inside the java folder.</p></li><li><p>Go to <code>onRestart()</code> function and add the following code between the the commented lines <code>04-start</code> and <code>04-end</code>.</p></li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/PaymentPreviewActivity.kt&quot;">if (isCardPayment) {
+  val intent = Intent(this, TransactionActivity::class.java)
+  intent.putExtra(&quot;UUID&quot;, uuid)
+  startActivity(intent)
+}
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/PaymentPreviewActivity.java&quot;">if (isCardPayment) {
+  Intent intent = new Intent(this, TransactionActivity.class);
+  intent.putExtra(&quot;UUID&quot;, uuid);
+  startActivity(intent);
+}
+</code></pre></div></div></div><p>The above code does the following:</p><p>Check if the <code>isCardPayment</code> is <code>true</code> and if so:</p><ul><li>create an Intent for the TransactionActivity.</li><li>pass <code>transaction_uuid</code> value of the response to the intent.</li><li>Go to TransactionActivity.</li></ul><div class="admonition admonition-info alert alert--info"><div class="admonition-heading"><h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</h5></div><div class="admonition-content"><p><code>onRestart</code> function gets triggered when the the user closes the web view (when the current activity is being re-displayed to the user)
+Read more about it <a href="https://developer.android.com/reference/android/app/Activity#onRestart()">here</a></p></div></div><ol start="3"><li><p>Go to TransactionActivity inside the java folder.</p></li><li><p>Go to <code>onStart()</code> function and add the following code between the commented lines <code>01-start</code> and <code>01-end</code>.</p></li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/TransactionActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/TransactionActivity.kt&quot;">uuid = intent.getStringExtra(&quot;UUID&quot;)
+uuid?.let { loadTransaction(it) }
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/TransactionActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/TransactionActivity.java&quot;">loadTransaction(uuid);
+</code></pre></div></div></div><p>The above code does the following:</p><ul><li>Get the value of the UUID passed to the intent.</li><li>call <code>loadTransaction()</code> function with the value of the UUID</li></ul><ol start="5"><li>Go to <code>loadTransaction()</code> function and add the following code between the the commented lines <code>02-start</code> and <code>02-end</code>.</li></ol><div><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_1w39 tabs__item--active">Kotlin</li><li role="tab" tabindex="0" aria-selected="false" class="tabs__item tabItem_1w39">Java</li></ul><div class="margin-vert--md"><div role="tabpanel"><pre><code class="language-kt" metastring="title=&quot;/app/src/main/java/com.xpay.kotlin/TransactionActivity.kt&quot;" title="&quot;/app/src/main/java/com.xpay.kotlin/TransactionActivity.kt&quot;">lifecycleScope.launch {
+  try {
+    dialog?.show()
+    Uid.let { it -&gt;
+      val res = XpayUtils.getTransaction(it)
+      res?.let { updateTransaction(it) }
+    }
+  } catch (e: Exception) {
+    dialog?.dismiss()
+    e.message?.let { displayError(e.message.toString()) }
+  }
+}
+</code></pre></div><div role="tabpanel" hidden=""><pre><code class="language-java" metastring="title=&quot;/app/src/main/java/com.xpay.sdkjava/TransactionActivity.java&quot;" title="&quot;/app/src/main/java/com.xpay.sdkjava/TransactionActivity.java&quot;">dialog.show();
+try {
+  XpayUtils.INSTANCE.getTransaction(Uid, TransactionCallback);
+} catch (Exception e) {
+  dialog.dismiss();
+  runOnUiThread(new Runnable() {
+  @Override
+  public void run() {
+    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+  }
+  });
+}
+</code></pre></div></div></div><p>The above code does the following:</p><ol><li>Start a Coroutine Scope</li><li>Try to call the <code>XpayUtils.getTransaction()</code> and if successfull call the <code>updateTransaction()</code> function with the response which updates the view with the transaction info.</li><li>If an error occured, call the <code>displayError()</code> function to display the error message in a toast.</li></ol><p>Try to run the app again and make a card payment using the testing credit card information found <a href="/android-sdk/installation#test">here</a></p><img alt="Add API key" src="/docs/kotlinsdk/04.gif"><p>After getting a response message from the server close the web view, you will be navigated to TransactionActivity and you will see the latest transaction information.
+you can compare the status value with the message you got in the web view.</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/android-sdk/xpayutils"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« XpayUtils</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/android-sdk/classes"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Models »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_ thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link">Introduction</a></li><li><a href="#what-you-should-already-know" class="table-of-contents__link">What you should already know</a></li><li><a href="#what-youll-learn" class="table-of-contents__link">What you&#39;ll learn</a></li><li><a href="#what-youll-do" class="table-of-contents__link">What you&#39;ll do</a></li><li><a href="#project-code" class="table-of-contents__link">Project code</a></li><li><a href="#project-layout" class="table-of-contents__link">Project layout</a></li><li><a href="#run-the-app" class="table-of-contents__link">Run The app</a></li><li><a href="#1-prepare-for-the-checkout-process" class="table-of-contents__link">1. Prepare for the checkout process</a></li><li><a href="#2-adding-custom-fields" class="table-of-contents__link">2. Adding custom fields</a></li><li><a href="#3-display-active-payment-methods" class="table-of-contents__link">3. Display active payment methods</a></li><li><a href="#4-set-payment-method" class="table-of-contents__link">4. Set Payment method</a></li><li><a href="#5-populate-city-state-values" class="table-of-contents__link">5. Populate city-state values</a></li><li><a href="#6-validate-billing-info-and-preview-payment-information" class="table-of-contents__link">6. Validate billing info and preview payment information</a></li><li><a href="#7-review-payment-information" class="table-of-contents__link">7. Review Payment information</a></li><li><a href="#8-payment" class="table-of-contents__link">8. Payment</a></li><li><a href="#9-getting-transaction-details" class="table-of-contents__link">9. Getting Transaction details</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://facebook.com/xpayeg" target="_blank" rel="noopener noreferrer" class="footer__link-item">Facebook</a></li><li class="footer__item"><a href="https://twitter.com/xpayeg" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter</a></li><li class="footer__item"><a href="https://xpay.app" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<script src="/docs/styles.3229d0a7.js"></script>
+<script src="/docs/runtime~main.3f9f0fe5.js"></script>
+<script src="/docs/main.af1a8f5b.js"></script>
+<script src="/docs/1.386338a1.js"></script>
+<script src="/docs/26.ece9695a.js"></script>
+<script src="/docs/29.c50d3e04.js"></script>
+<script src="/docs/f976f453.5dfe3540.js"></script>
+<script src="/docs/25.f8d3c7df.js"></script>
+<script src="/docs/4cc156f0.d686a3d1.js"></script>
+</body>
+</html>
